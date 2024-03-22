@@ -12,26 +12,26 @@
 `VBoxManage controlvm "<VM-ID>" reset`
 -------
 ### Check Remote Display settings
-	* For a particular VM
+* For a particular VM
 	```
 	VBoxManage showvminfo <VMNAME> | grep "VRDE"
 	```
-	* For all VMS
+* For all VMS
 	```
 	for vm in $(VBoxManage list vms | awk -F'"' '{print $2}'); do echo "VM Name: $vm"; VBoxManage showvminfo "$vm" | grep "VRDE"; echo "------------------"; done
 	```
 ### List forwarded VM ports
-	* For a particular VM
+* For a particular VM
 	```
 	VBoxManage showvminfo <VMNAME> --machinereadable | grep 'Forwarding'
 	```
-	* For all VMS
+* For all VMS
 	```
 	for vm in $(VBoxManage list vms | awk -F'"' '{print $2}'); do echo "VM Name: $vm"; VBoxManage showvminfo "$vm" | grep 'Forwarding'; echo "------------------"; done
 	```
 -------
 ### Add Remote Display settings
-	* For a particular VM
+* For a particular VM
 	```
 	VBoxManage modifyvm <VMNAME> --vrde on
 	VBoxManage modifyvm <VMNAME> --vrdeport 4000
