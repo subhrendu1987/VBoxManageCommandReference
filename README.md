@@ -4,6 +4,10 @@
 `VBoxManage list vms`
 ### List of Running VMs
 `VBoxManage list runningvms`
+### To start the VM
+`VBoxManage startvm <VMNAME> --type headless`
+### To shutdown the VM
+`VBoxManage controlvm <VMNAME> acpipowerbutton`
 ### Restart VM
 `VBoxManage controlvm "<VM-ID>" reset`
 -------
@@ -29,6 +33,7 @@
 ### Add Remote Display settings
 	* For a particular VM
 	```
+	VBoxManage modifyvm <VMNAME> --vrde on
 	VBoxManage modifyvm <VMNAME> --vrdeport 4000
 	```
 ------
