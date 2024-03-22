@@ -34,7 +34,7 @@
 * For a particular VM
 	```
 	VBoxManage modifyvm <VMNAME> --vrde on
-	VBoxManage modifyvm <VMNAME> --vrdeport 4000
+	VBoxManage modifyvm <VMNAME> --vrdeport <VM-VRDE-PORT>
 	```
 ------
 ### Delete VM with all files
