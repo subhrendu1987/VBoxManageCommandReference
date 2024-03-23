@@ -10,6 +10,7 @@
 `VBoxManage controlvm <VMNAME> acpipowerbutton`
 ### Restart VM
 `VBoxManage controlvm "<VM-ID>" reset`
+
 -------
 ### Check Remote Display settings
 * For a particular VM
